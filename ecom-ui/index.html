@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- icon linked -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <!-- animate.css linded -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- tailwind linked -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- sweet alert liked -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- axios linked -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+    <!-- razorpay -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- js file -->
+    <script src="js/env.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="space-y-6 bg-gray-200 min-h-screen">
+        <!-- navbar -->
+        <nav class="bg-white sticky top-0 left-0 flex items-center justify-between px-[10%] py-4 shadow-lg">
+            <div class="flex items-center gap-2">
+                <img src="/images/icons8-cart-94.png" class="w-12" alt="icons8-cart-94">
+                <h1 class="font-bold text-lg">E-com</h1>
+            </div>
+            <div class="space-x-12 flex items-center">
+                <a href="#" class="font-bold">Home</a>
+                <a href="/products.html" class="hover:font-bold">Products</a>
+                <div class="flex items-center gap-12" id="account-menu">
+
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-col gap-2 items-center pt-24 hidden" id="product-not-found">
+            <i class="ri-database-2-fill text-6xl text-violet-600"></i>
+            <h1 class="text-4xl font-bold">Products Not Awailable</h1>
+        </div>
+        <!-- section -->
+        <div class="grid grid-cols-4 pb-6 mx-auto w-[80%] gap-4" id="product-container">
+            
+        </div>
+    </div>
+</body>
+</html>

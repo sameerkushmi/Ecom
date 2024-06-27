@@ -1,0 +1,51 @@
+{
+  "entity": "event",
+  "account_id": "acc_NXyLdGc9stR2xI",
+  "event": "payment.captured",
+  "contains": [
+    "payment"
+  ],
+  "payload": {
+    "payment": {
+      "entity": {
+        "id": "pay_OJsurDblPUM0xz",
+        "entity": "payment",
+        "amount": 50000,
+        "currency": "INR",
+        "status": "captured",
+        "order_id": "order_OJsugyfgp7WmAd",
+        "invoice_id": null,
+        "international": false,
+        "method": "wallet",
+        "amount_refunded": 0,
+        "refund_status": null,
+        "captured": true,
+        "description": "formal shirt",
+        "card_id": null,
+        "bank": null,
+        "wallet": "mobikwik",
+        "vpa": null,
+        "email": "csameer795@gmail.com",
+        "contact": "+919319346402",
+        "notes": {
+          "name": "sameer",
+          "userId": "1234567980"
+        },
+        "fee": 1180,
+        "tax": 180,
+        "error_code": null,
+        "error_description": null,
+        "error_source": null,
+        "error_step": null,
+        "error_reason": null,
+        "acquirer_data": {
+          "transaction_id": null
+        },
+        "created_at": 1717766336,
+        "reward": null,
+        "base_amount": 50000
+      }
+    }
+  },
+  "created_at": 1717766341
+}

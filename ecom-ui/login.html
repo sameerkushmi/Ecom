@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- animate.css linded -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.0/css/all.min.css">
+    <!-- tailwind linked -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- axios linked -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+    <script src="js/env.js"></script>
+    <script src="js/auth.js"></script>
+    <!-- loign js -->
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div class="bg-rose-100 min-h-screen flex justify-center items-center p-8 animate__animated animate__fadeIn">
+        <div class="bg-white md:w-4/12 w-8/12 space-y-4 shadow-lg p-6 rounded-lg animate__animated animate__fadeIn">
+            <img src="images/login.svg" alt="">
+            <h1 class="text-center font-semibold text-2xl">Welcome back !</h1>
+            <form class="flex flex-col gap-6" onsubmit="login(event)">
+                <input 
+                    oninput="removeError()"
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="User Name"
+                    class="border p-2 rounded-lg"
+                />
+                <input 
+                    oninput="removeError()"
+                    required
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    class="border p-2 rounded-lg"
+                />
+                <p class="text-rose-600 font-semibold hidden" id="error">something is not right</p>
+                <button class="py-2 w-fit px-6 bg-indigo-600 text-white rounded-lg" id="signin-button">Sign in</button>
+                <button type="button" class="font-semibold text-gray-600 hidden" id="loader" disabled>
+                    <i class="fa fa-spinner fa-spin"></i>
+                    Processing...
+                  </button>
+            </form>
+            <div>
+                Don't have an account ? <a href="signup.html" class="text-blue-600 font-semibold">Register Now</a>
+            </div>
+            <div>
+                <a href="forgot-password.html">Forgot Password ?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

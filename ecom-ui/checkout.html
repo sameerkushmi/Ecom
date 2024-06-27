@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- icon linked -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <!-- axios linked -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+    <!-- tailwind linked -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/env.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- js file -->
+    <script src="js/checkout.js"></script>
+</head>
+<body>
+    <div class="h-screen bg-gray-200 flex justify-center items-center">
+        <div class="bg-white rounded-xl overflow-hidden w-7/12 shadow">
+            <div class="grid grid-cols-2">
+                <div>
+                    <img src="images/avatar.png" id="product-pic" alt="" class="h-[470px] w-full object-cover border" />
+                </div>
+                <div class="p-6  space-y-8">
+                    <div>
+                        <h1 class="text-2xl font-semibold capitalize" id="title"></h1>
+                        <p class="text-gray-600" id="description"></p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <h1 class="font-bold">Price</h1>
+                        <label id="price"></label>
+                        <h1 class="font-bold">Discount</h1>
+                        <label id="discount"></label>
+                    </div>
+                    <hr/>
+                    <div class="grid grid-cols-2 gap-2">
+                        <h1 class="font-bold">Payment Amount</h1>
+                        <label id="total"></label>
+                    </div>
+                    <button
+                        onclick="buyNow()" 
+                        class="w-full py-3 rounded bg-indigo-600 hover:bg-indigo-800 text-white font-semibold text-lg" >Buy Now</button>
+                    <form class="flex gap-2" onsubmit="applyCoupon(event)">
+                        <input 
+                            id="coupon"
+                            required
+                            placeholder="Enter coupon code"
+                            type="text"
+                            class="w-full border border-neutral-300 rounded p-3 outline-none" 
+                        />
+                        <button class="bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded font-semibold">Apply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
